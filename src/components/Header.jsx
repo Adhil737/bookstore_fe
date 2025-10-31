@@ -68,26 +68,28 @@ const Header = () => {
             className="hover:text-blue-500 cursor-pointer transition"
           />
           {isLoggedIn ? (
-            <div className="relative">
+            <div className="relative ">
               <img
                 src={userDetails.profile}
                 alt=""
-                className="w-15 rounded-full absolute"
+                className="w-15 rounded-full absolute ml-25"
               />
 
               <Dropdown
-                className="text-3xl text-transparent cursor-pointer"
+                className="text-2xl mt-[-10px]  text-transparent cursor-pointer ml-10"
                 label="Options"
                 dismissOnClick={false}
               >
-                <DropdownItem>
-                  <Link to={"/profile"}>Profile</Link>
+                <div className="">
+                  <DropdownItem className="">
+                  <Link className="" to={"/profile"}>Profile</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <button className="cursor-pointer" onClick={onLogoutClick}>
+                  <button className="cursor-pointer " onClick={onLogoutClick}>
                     Sign out
                   </button>
                 </DropdownItem>
+                </div>
               </Dropdown>
             </div>
           ) : (

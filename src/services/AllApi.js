@@ -1,5 +1,5 @@
 import { BaseUrl } from "./BaseUrl";
-import commonApi from "./commonAPI";
+import commonApi from "./commonApi";
 
 export const createUser = async (reqBody) => {
   return await commonApi("post", `${BaseUrl}/register`, reqBody);
