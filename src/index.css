@@ -1,0 +1,287 @@
+/* Landing.css */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  
+}
+.payment-bg{
+  background-color: var(--primary-color);
+}
+@import "tailwindcss";
+
+/* Theme variables */
+:root {
+  --primary-color: hsl(205, 51%, 15%); /* Deep blue background */
+  --secondary-color: #173245;
+  --background-color: #456882;
+  --text-color: #d2c1b6;
+}
+
+/* Global layout */
+.container {
+  background-color: var(--primary-color);
+
+  color: var(--text-color);
+}
+
+/* Loader */
+.loader img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+}
+
+/* Navigation */
+.nav-links {
+  background-color: var(--secondary-color);
+  width: 50%;
+  border-radius: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  margin-top: 0;
+  padding-bottom: 60px; /* space for extra items */
+}
+
+/* Banner */
+.banner {
+  margin: 20px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 10px;
+  background-color: hsl(205, 51%, 12%);
+  position: relative;
+}
+
+.banner-head {
+  width: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-head h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-head h3 {
+  color: white;
+  text-shadow: 0 0 5px rgb(63, 185, 177), 0 0 10px rgb(255, 255, 255),
+    0 0 20px rgb(6, 173, 224);
+  font-weight: bold;
+}
+
+/* .banner-head input {
+  background-color: var(--primary-color);
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  text-align: center;
+  color: white;
+}
+
+.banner-head button {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+} */
+
+.loading-text {
+  background: linear-gradient(
+      90deg,
+      hsl(204, 46%, 68%),
+      hsl(205, 45%, 45%),
+      #a1bbcf
+    ) -100% / 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Card Section */
+.card-section {
+  background-color: var(--primary-color);
+
+  display: grid;
+
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+}
+
+.section-wrapper {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-wrapper button {
+  border: 2px solid #7aa2e3;
+  color: #7aa2e3;
+  background: transparent;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.section-wrapper button:hover {
+  background: #7aa2e3;
+  color: #fff;
+  box-shadow: 0 0 10px #7aa2e3;
+}
+
+/* Animation */
+@keyframes shimmer {
+  to {
+    background-position: 100%;
+  }
+}
+.bg-background {
+  background-color: hsl(205, 51%, 12%);
+}
+.subscribe-button {
+  background-color: white;
+  color: var(--primary-color);
+}
+.subscribe-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+#AuthBg {
+  background-color: var(--primary-color);
+  height: 100vh;
+  width: 100%;
+}
+.form-bg {
+  background-color: var(--secondary-color);
+}
+/* Contact-Page */
+.contact-page-bg {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+}
+.contact-icons {
+  background-color: var(--secondary-color);
+  padding: 5px;
+  border-radius: 50px;
+}
+.contact-inbox-section {
+  background-color: var(--secondary-color);
+}
+.career-page-bg {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+}
+
+/* Book Page  Designs */
+.books-page-bg {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.login-required-gif {
+  height: 100vh;
+  width: 100%;
+}
+.filter-section-bg {
+  background-color: var(--secondary-color);
+}
+.admin-header {
+  background-color: var(--primary-color);
+}
+.marque-tag {
+  background-color: var(--secondary-color);
+}
+.sideBar-bg {
+  background-color: var(--primary-color);
+}
+.admin-home-bg {
+  background-color: var(--primary-color);
+}
+.box {
+  height: 7rem;
+  width: 70%;
+}
+@media (min-width: 769px) {
+  .box {
+    height: 5rem;
+    width: 23.3%;
+  }
+}
+@media (max-width: 1180px) {
+  .box {
+    height: 6rem;
+    width: 70.3%;
+  }
+}
+th,
+td {
+  border: 1px solid white;
+}
+.profile-section-bg {
+  background-color: var(--primary-color);
+}
+
+/* animation for nav links */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links li,
+.nav-links a {
+  opacity: 0;
+  animation: fadeSlideIn 0.4s ease forwards;
+}
+
+/* delay each link slightly for a cascade effect */
+.nav-links a:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.nav-links a:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nav-links a:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.nav-links a:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.nav-links a:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.animate-links a {
+  opacity: 1;
+  animation: fadeSlideIn 0.4s ease forwards;
+}
+.viewSingleBookBg{
+  background-color: var(--primary-color);
+}

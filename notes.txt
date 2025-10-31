@@ -1,0 +1,13 @@
+IMPLEMENTING GOOGLE AUTHENTICATION IN REACT
+
+1.Go to google console
+2. Create a project
+3. In that project go to api libraries
+4. go to credentials
+5.crate a oAuth by providing port and etc..
+6. create a client by providing port and etc.we will get client id and please save it before
+it goes
+7. install npm i @react-oath/google
+8. wrap the app in main.jsx with GoogleAuthProvider provide client id as its argument
+9. use GoogleLogin (code from (react google auth site) documentation) in wherever you want the google
+Authentication
