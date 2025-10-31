@@ -62,10 +62,10 @@ const EditProfile = () => {
     }
   }
   return (
-    <>
-      <div className="lg:ml-[1100px]">
+    <div className="">
+      <div className="lg:ml-[1100px] ">
         <button
-          className="bg-blue-700 mt-4 lg:mt-5 mx-4 hover:bg-blue-800 p-2 rounded-md  text-white text-lg"
+          className="bg-blue-700 mt-4 lg:mt-80 mx-4 hover:bg-blue-800 p-2 rounded-md  text-white text-lg"
           onClick={() => setIsOpen(true)}
         >
           <FontAwesomeIcon icon={faEdit} className="mr-2" /> Edit
@@ -82,7 +82,7 @@ const EditProfile = () => {
             <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
-        <div className=" mt-5 ">
+        <div className=" pt-5 bgEdit min-h-[90.6%]">
           {preview ? (
             <img
               className="rounded-full w-40 h-40 p-[10px] mx-auto border-4 border-gray-600 shadow-lg"
@@ -164,7 +164,7 @@ const EditProfile = () => {
           </div>
         </div>
       </Drawer>
-    </>
+    </div>
   );
 };
 

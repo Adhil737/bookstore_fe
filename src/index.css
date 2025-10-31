@@ -24,7 +24,9 @@
 
   color: var(--text-color);
 }
-
+.bgEdit{
+  background-color: var(--primary-color);
+}
 /* Loader */
 .loader img {
   height: 100vh;
