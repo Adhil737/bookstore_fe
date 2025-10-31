@@ -76,7 +76,7 @@ const Header = () => {
               />
 
               <Dropdown
-                className="text-2xl mt-[-10px]  text-transparent cursor-pointer ml-10"
+                className="text-2xl   text-transparent cursor-pointer ml-10"
                 label="Options"
                 dismissOnClick={false}
               >

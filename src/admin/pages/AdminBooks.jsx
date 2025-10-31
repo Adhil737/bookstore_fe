@@ -80,14 +80,14 @@ const AdminBooks = () => {
                 {/* Book Card */}
                 <div className="mt-5">
                   {books?.length > 0 ? (
-                    <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 place-items-center gap-7 ">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
                       {books?.map((eachBooks) => (
-                        <div className="bg-gray-900 text-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300 w-full sm:w-72 md:w-80 lg:w-96 my-4">
+                        <div className="card bg-gray-900 text-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300 flex flex-col mx-5">
                           <figure className="px-6 pt-6">
                             <img
                               src={`${BaseUrl}/uploads/${eachBooks.uploadedImages[0]}`}
                               alt="Book"
-                              className="rounded-xl shadow-lg w-full object-cover"
+                              className="rounded-xl shadow-lg w-full h-64 lg:h-100 object-cover"
                             />
                           </figure>
                           <div className="card-body items-center text-center p-4">
@@ -120,17 +120,19 @@ const AdminBooks = () => {
               {
                 users?.map((eachBooks)=>(
                   <div className="bg-gray-600 rounded-2xl w-full h-40">
-                <h1 className="p-2 font-bold text-[20px]">
+                <h1 className="p-2 font-bold text-[15px]">
                   Id : {eachBooks._id}
                 </h1>
                 <div className="flex items-center">
-                  <img
+                  {
+                    users.profile?<img src={eachBooks.profile} alt="user profile"/>:<img
                     src="https://www.pngfind.com/pngs/m/610-6104451_image-placeholder-png-user-profile-placeholder-image-png.png"
                     alt="User"
                     className="rounded-full w-20 mx-2 border-4 border-gray-600 shadow-lg"
                   />
-                  <h1 className="text-center text-orange-500">
-                    <span className="text-blue-600">{eachBooks.username}</span>
+                  }
+                  <h1 className="text-center text-orange-500 truncate mx-auto w-48">
+                    <span className="text-blue-600 block">{eachBooks.username}</span>
                     <br />
                     {eachBooks.email}
                   </h1>

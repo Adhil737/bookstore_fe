@@ -164,7 +164,7 @@ const AllBooks = () => {
               {/* === BOOK DISPLAY SECTION === */}
               <div>
                 {books.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                     {books?.map((eachBooks, index) => {
                       const isExpanded = expanded[index];
                       const abstract = eachBooks.abstract || "";
@@ -183,7 +183,7 @@ const AllBooks = () => {
                             <img
                               src={`${BaseUrl}/uploads/${eachBooks.uploadedImages[0]}`}
                               alt="Book"
-                              className="rounded-xl shadow-lg w-full h-64 object-cover"
+                              className="rounded-xl shadow-lg w-full h-64 lg:h-100 object-cover"
                             />
                           </figure>
 

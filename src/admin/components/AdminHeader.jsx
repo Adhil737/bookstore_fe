@@ -1,7 +1,7 @@
 import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { Children, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { Children, useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   faHome,
   faBook,
@@ -9,9 +9,14 @@ import {
   faCog,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+
 const AdminHeader = ({ children }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const onLogoutClick = () => {
+    localStorage.clear();
+  };
+
   return (
     <>
       <header className=" text-white admin-header text-xl ">
@@ -28,10 +33,14 @@ const AdminHeader = ({ children }) => {
               Book Store
             </h1>
           </div>
-          <button className=" flex items-center gap-2 border border-gray-500 px-3 py-1 rounded-2xl hover:bg-gray-700 transition">
+          <Link
+            to={"/"}
+            onClick={onLogoutClick}
+            className=" flex items-center gap-2 border border-gray-500 px-3 py-1 rounded-2xl hover:bg-gray-700 transition"
+          >
             <FontAwesomeIcon icon={faUser} />
             <span>Logout</span>
-          </button>
+          </Link>
         </div>
 
         {/* Navigation Links */}
