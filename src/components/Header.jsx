@@ -158,13 +158,30 @@ const Header = () => {
             {/* Login for mobile */}
             {isLoggedIn ? (
               <div className="block md:hidden">
-                <img src={userDetails.profile} alt="" />
-                <Dropdown label="Options" dismissOnClick={false}>
-                  <DropdownItem>
-                    <Link to={"/profile"}>Profile</Link>
-                  </DropdownItem>
-                  <DropdownItem>Sign out</DropdownItem>
-                </Dropdown>
+                <div className="relative ">
+              <img
+                src={userDetails.profile}
+                alt=""
+                className="w-15 rounded-full absolute ml-15 mt-[-5px]"
+              />
+
+              <Dropdown
+                className="text-2xl mt-[-15px]  text-transparent cursor-pointer ml-10"
+                label="Options"
+                dismissOnClick={false}
+              >
+                <div className="">
+                  <DropdownItem className="">
+                  <Link className="" to={"/profile"}>Profile</Link>
+                </DropdownItem>
+                <DropdownItem>
+                  <button className="cursor-pointer " onClick={onLogoutClick}>
+                    Sign out
+                  </button>
+                </DropdownItem>
+                </div>
+              </Dropdown>
+            </div>
               </div>
             ) : (
               <Link
