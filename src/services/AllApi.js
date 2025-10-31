@@ -1,5 +1,5 @@
 import { BaseUrl } from "./BaseUrl";
-import commonApi from "./commonApi";
+import commonApi from "./CommonApi";
 
 export const createUser = async (reqBody) => {
   return await commonApi("post", `${BaseUrl}/register`, reqBody);
@@ -10,7 +10,7 @@ export const loginUser = async (reqBody) => {
 };
 
 export const googleLogin = async (reqBody) => {
-  return await commonApi("post", `${BaseUrl}/googleAuth`, reqBody);
+  return await CommonApi("post", `${BaseUrl}/googleAuth`, reqBody);
 };
 
 export const createBook = async (reqBody, header) => {
