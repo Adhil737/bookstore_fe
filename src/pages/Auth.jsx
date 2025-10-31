@@ -168,7 +168,8 @@ const Auth = ({ insideRegister }) => {
                 )}
               </div>
               {/* For-Google-Authentication */}
-              <GoogleLogin
+              <div className="text-center flex justify-center items-center">
+                <GoogleLogin 
                 onSuccess={(credentialResponse) => {
                   //console.log(credentialResponse);
                   handleGAuthDecode(credentialResponse.credential);
@@ -177,6 +178,7 @@ const Auth = ({ insideRegister }) => {
                   console.log("Login Failed");
                 }}
               />
+              </div>
 
               {insideRegister ? (
                 <button
